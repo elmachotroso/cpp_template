@@ -14,7 +14,7 @@ bash -c generate_projects.sh
 Depending on the type of project, you can build them accordingly:
 ### Visual Studio
 ```cmd
-msbuild ./build/app.sln /p:Configuration=Release
+devenv ./build/app.sln /Build Release
 ```
 ### Make
 ```/bin/bash
