@@ -1,0 +1,93 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++20: g++ 11.2.0 DEBUG Build",
+			"command": "/usr/local/bin/g++-11",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-Wall",
+				"-std=c++20",
+				"-DDEBUG",
+				"-g",
+				"${workspaceFolder}/src/*.cpp",
+				"-o",
+				"${workspaceFolder}/bin/run"
+			],
+			"options": {	
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/local/bin/g++-11"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++20: clang++ 10.0.0 DEBUG Build",
+			"command": "/usr/bin/clang++",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-Wall",
+				"-std=c++2a",
+				"-DDEBUG",
+				"-g",
+				"${workspaceFolder}/src/*.cpp",
+				"-o",
+				"${workspaceFolder}/bin/run"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/clang++"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++20: g++ 11.2.0 RELEASE Build",
+			"command": "/usr/local/bin/g++-11",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-Wall",
+				"-std=c++20",
+				"${workspaceFolder}/src/*.cpp",
+				"-o",
+				"${workspaceFolder}/bin/run"
+			],
+			"options": {	
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/local/bin/g++-11"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++20: clang++ 10.0.0 DEBUG Build",
+			"command": "/usr/bin/clang++",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-Wall",
+				"-std=c++2a",
+				"${workspaceFolder}/src/*.cpp",
+				"-o",
+				"${workspaceFolder}/bin/run"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: /usr/bin/clang++"
+		}
+	]
+}
