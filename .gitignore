@@ -1,3 +1,6 @@
+/bin/
+!/bin/info.txt
+
 # My CMake build directory
 build/*
 
