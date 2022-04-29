@@ -21,7 +21,7 @@
             ],
             "defines": [],
             "macFrameworkPath": [],
-            "compilerPath": "/usr/local/bin/g++-11",
+            "compilerPath": "/opt/homebrew/opt/ccache/libexec/g++-11",
             "cStandard": "gnu17",
             "cppStandard": "c++20",
             "intelliSenseMode": "macos-gcc-x64"
