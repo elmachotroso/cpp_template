@@ -17,7 +17,9 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/src/**",
-                "${workspaceFolder}/lib/**"
+                "${workspaceFolder}/lib/**",
+                "${workspaceFolder}/build/_deps/googletest-src/googletest/include/**",
+                "${workspaceFolder}/build/_deps/googletest-src/googletest/include/**"
             ],
             "defines": [],
             "macFrameworkPath": [],
