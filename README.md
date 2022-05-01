@@ -97,3 +97,9 @@ You can use either `clean_release` or `clean_debug` to clean the application bin
 clean_debug.bat
 clean_release.bat
 ```
+
+## Other Notes
+This framework has been tested for:
+* `C++20`
+* `MacOS` using `make`
+* `Windows` using `Visual Studio 2019`
