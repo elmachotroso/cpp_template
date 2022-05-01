@@ -1,2 +1,4 @@
 @echo off
-devenv "./build/app.sln" /Clean Debug
+
+set BUILD_TYPE=Debug
+.\build_release.bat %BUILD_TYPE% clean
