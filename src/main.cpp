@@ -1,4 +1,5 @@
 #include <iostream>
+#include "Sample.h"
 
 namespace TestCpp20
 {
@@ -10,11 +11,12 @@ namespace TestCpp20
     }
 }
 
-namespace TestCpp
+namespace TestSample
 {
     int main()
     {
-        std::cout << "Hello World!" << std::endl;
+        CppTemplate::Sample sample( "Hello Sample World!" );
+        std::cout << sample.getMessage() << std::endl;
         return 0;
     }
 }
@@ -22,5 +24,6 @@ namespace TestCpp
 int main( int argc, const char * argv[] )
 {
     TestCpp20::main();
+    TestSample::main();
     return 0;
 }

@@ -20,6 +20,7 @@ add_compile_options(
 
 add_executable( ${APP_BINARY_NAME} )
 target_sources( ${APP_BINARY_NAME} PRIVATE
+    src/Sample.cpp
     src/main.cpp
 )
 
@@ -48,14 +49,15 @@ FetchContent_MakeAvailable( googletest )
 
 enable_testing()
 
-set( TEST_SRC_FILES ${TEST_SRC_FILES}
+add_executable( ${TEST_BINARY_NAME} )
+target_sources( ${TEST_BINARY_NAME} PRIVATE
+    src/Sample.cpp
     test/gtest_test.cpp
 )
-
-add_executable( ${TEST_BINARY_NAME} ${TEST_SRC_FILES} )
 target_link_libraries( ${TEST_BINARY_NAME}
     gtest_main
 )
+target_include_directories( ${TEST_BINARY_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src )
 
 include( GoogleTest )
 gtest_discover_tests( ${TEST_BINARY_NAME} )
