@@ -9,6 +9,7 @@ ___
 ## Tech Stack
 * Visual Studio Code
 * CMake
+* Make
 * GoogleTest (GTest)
 ___
 ## Usage
@@ -102,4 +103,4 @@ ___
 This framework has been tested for:
 * `C++20`
 * `MacOS` using `make`
-* `Windows` using `Visual Studio 2019`
+* `Windows` using `make`
