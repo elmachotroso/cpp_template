@@ -1,2 +1,8 @@
 #!/usr/bin/env bash
-./make_build_release.sh "debug"
+
+set -e
+
+BUILD_DIR="build/Debug"
+./make_build_release.sh "${BUILD_DIR}"
+
+set +e

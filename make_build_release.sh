@@ -2,24 +2,22 @@
 
 set -e
 
-MAKE_OPTIONS=$1
-
-BUILD_DIR="build"
+BUILD_DIR="build/Release"
+if [ -n "$1" ]; then
+    BUILD_DIR="$1"
+fi
 
 if [ ! -d "${BUILD_DIR}" ]; then
     echo "No ${BUILD_DIR} folder found."
     exit 1
-    set +e
+    seet +e
 fi
 
-pushd "${BUILD_DIR}"
-if [ -n "${MAKE_OPTIONS}" ]; then
-    echo "make ${MAKE_OPTIONS}"
-    make ${MAKE_OPTIONS}
-else
-    echo "make"
-    make
+DO_CLEAN=""
+if [ -n "$2" ]; then
+    DO_CLEAN="--target clean"
 fi
-popd
+
+cmake --build ${BUILD_DIR} ${DO_CLEAN}
 
 set +e

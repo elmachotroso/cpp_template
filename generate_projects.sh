@@ -10,5 +10,7 @@ if [ ! -d "${BUILD_DIR}" ]; then
     mkdir "${BUILD_DIR}"
 fi
 
-cd "${BUILD_DIR}"
-cmake ../
+pushd "${BUILD_DIR}"
+cmake -S ../ -B ./Debug -DCMAKE_BUILD_TYPE=Debug
+cmake -S ../ -B ./Release -DCMAKE_BUILD_TYPE=Release
+popd
