@@ -18,11 +18,10 @@ add_compile_options(
   "$<$<CONFIG:DEBUG>:-O0;-g3;-ggdb>"
 )
 
-set( APP_SRC_FILES ${APP_SRC_FILES}
+add_executable( ${APP_BINARY_NAME} )
+target_sources( ${APP_BINARY_NAME} PRIVATE
     src/main.cpp
 )
-
-add_executable( ${APP_BINARY_NAME} ${APP_SRC_FILES} )
 
 # (Visual Studio) set the start up project
 set_property( DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${APP_BINARY_NAME} )
