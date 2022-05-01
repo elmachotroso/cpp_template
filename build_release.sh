@@ -10,7 +10,7 @@ fi
 if [ ! -d "${BUILD_DIR}" ]; then
     echo "No ${BUILD_DIR} folder found."
     exit 1
-    seet +e
+    set +e
 fi
 
 DO_CLEAN=""
